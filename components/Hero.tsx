@@ -261,7 +261,7 @@ const Hero: React.FC = () => {
       {/* Layer 2: Main Content */}
       <motion.div 
         style={{ opacity, scale, y }}
-        className="relative z-20 text-center max-w-6xl px-6 flex flex-col items-center"
+        className="relative z-20 text-center w-full px-6 flex flex-col items-center"
       >
           {/* Badge */}
           <motion.div
@@ -278,14 +278,12 @@ const Hero: React.FC = () => {
           </motion.div>
 
           {/* Main Title - Prismatic Effect */}
-          <div className="relative mb-8">
-              <h1 className="text-7xl md:text-9xl font-black tracking-tighter leading-[0.9] text-white mix-blend-overlay opacity-50 select-none" aria-hidden="true">
-                  KNOWLEDGE<br/>FLOW
-              </h1>
+          <div className="relative mb-8 inline-block px-2">
+              <h1 className="text-[clamp(2.6rem,11vw,8.5rem)] font-black tracking-tight leading-[0.9] md:leading-[0.95] text-white mix-blend-overlay opacity-50 select-none" aria-hidden="true">KNOWLEDGE<br/>FLOW</h1>
               
               {/* Overlay Text with Gradient Mask */}
               <motion.h1 
-                className="absolute inset-0 text-7xl md:text-9xl font-black tracking-tighter leading-[0.9] text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-transparent pointer-events-none"
+                className="absolute inset-0 text-[clamp(2.6rem,11vw,8.5rem)] font-black tracking-tight leading-[0.9] md:leading-[0.95] text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-transparent pointer-events-none"
                 initial={{ clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)" }}
                 animate={{ clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)" }}
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
